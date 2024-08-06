@@ -28,5 +28,3 @@
 - `shell:UsersLibrariesFolder` - 用户的库（图片、照片、文档、视频等）
 - `shell:RecycleBinFolder` - 回收站
 - `shell:UsersFilesFolder` - 用户的配置文件夹
-
-希望这个列表对您有所帮助！
