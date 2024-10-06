@@ -67,52 +67,7 @@ docker run -d \
 ```
 qBittorrent 是一个功能强大的 BT 客户端，具有丰富的功能和友好的 Web 界面，可以帮助你高效管理和下载 BT 资源。
 
-### 六、Homepage 导航页
-```bash
-docker run -d \
-  --name homepage \
-  -e PUID=0 \
-  -e PGID=0 \
-  -p 80:3000 \
-  -v /home/docker/homepage:/app/config \
-  -v /var/run/docker.sock:/var/run/docker.sock:ro \
-  --restart unless-stopped \
-  ghcr.io/gethomepage/homepage:latest
-```
-在容器启动后，你可以编辑 `config.yaml` 文件来配置导航页。将以下内容添加到 `/home/docker/homepage/config.yaml`：
-```yaml
-- Docker:
-    - Openwrt:
-        icon: openwrt.png
-        href: http://192.168.28.200
-    - Librespeed:
-        icon: librespeed.png
-        href: http://192.168.28.201:5555
-    - filebrowser:
-        icon: filebrowser.png
-        href: http://192.168.28.201:8080
-    - AriaNG:
-        icon: ariang.png
-        href: http://192.168.28.201:6880
-    - Portainer:
-        icon: portainer.png
-        href: http://192.168.28.201:9000
-        widget:
-          type: portainer
-          url: https://192.168.28.201:9443
-          env: 2
-          key: <your_key>
-    - Homeassistant:
-        icon: home-assistant-alt.png
-        href: http://192.168.28.201:8123
-        widget:
-          type: homeassistant
-          url: http://192.168.28.201:8123
-          key: <your_key>
-```
-Homepage 是一款外观简约，但功能丰富的导航页应用，除了能够展示常规的书签以外，还可以展示天气、系统状况、Docker 容器状态等信息。
-
-### 七、LibreSpeed  网速测试
+### 六、LibreSpeed  网速测试
 ```bash
 docker run -d \
   --name speedtest \
