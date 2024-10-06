@@ -13,7 +13,7 @@ docker run -d \
 ```
 File Browser是一个使用go语言编写的软件，功能是可以通过浏览器对服务器上的文件进行管理。
 
-### 二、Portainer 面板
+### 二、Portainer 面板(汉化版)
 ```bash
 docker run -d \
   -p 9000:9000 \
@@ -22,7 +22,7 @@ docker run -d \
   --restart=always \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v /home/docker/portainer_data:/data \
-  portainer/portainer-ce:latest
+  6053537/portainer-ce
 ```
 Portainer 是一种轻量级的开源管理工具，旨在简化管理 Docker 容器和 Kubernetes 集群的过程。它提供了一个用户友好的图形界面，使用户能够轻松地部署、管理和监控容器化应用。
 
