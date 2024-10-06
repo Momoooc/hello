@@ -6,7 +6,7 @@ docker run -d \
   -e PGID=0 \
   -p 80:3000 \
   -v /home/docker/homepage:/app/config \
-	-v /home/docker/homepage/icons:/app/public/icons \
+  -v /home/docker/homepage/icons:/app/public/icons \
   -v /home/docker/homepage/images:/app/public/images \
   -v /var/run/docker.sock:/var/run/docker.sock:ro \
   --restart unless-stopped \
