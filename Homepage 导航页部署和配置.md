@@ -10,6 +10,7 @@ docker run -d \
   --restart unless-stopped \
   ghcr.io/gethomepage/homepage:latest
 ```
+
 ### 二、编辑/home/docker/homepage的配置文件
 #### ./docker.yaml
 ```yaml
