@@ -1,36 +1,36 @@
-name: 🐞报告Bug
-description: 报告bug，请先查看常见问题及搜索issue列表中有无你要提的问题
-title: "[Bug]: "
+name: 🐞 报告问题
+description: 报告教程中遇到的问题或错误。
+title: "[问题]: "
 body:
 - type: checkboxes
   id: check-answer
   attributes:
-    label: 解决方案检查
-    description: 请确保你已完成以下所有操作
+    label: 检查列表
+    description: 在提交问题之前，请确保您已完成以下操作。
     options:
-      - label: 我已搜索issue列表(<https://github.com/Momoooc/hello/issues?utf8=✓&q=>)，并没有发现类似的问题
+      - label: 我已经搜索过现有的 issue，确认没有重复的问题。
         required: true
 - type: input
-  id: version
+  id: tutorial-title
   attributes:
-    label: 青龙版本
-    description: 你使用什么版本的青龙？
-    placeholder: "例如 2.10.13"
+    label: 相关的教程标题
+    description: 哪个教程出现了问题？
+    placeholder: "例如：安卓调试工具基础教程"
   validations:
     required: true
 - type: input
   id: operating-system-version
   attributes:
     label: 操作系统
-    description: 您使用的是什么操作系统？
-    placeholder: "例如 Ubuntu 20.04"
+    description: 您使用的是什么操作系统？（如果相关）
+    placeholder: "例如 Ubuntu 20.04, Windows 10"
   validations:
-    required: true
+    required: false
 - type: textarea
-  id: vulnerability-feedback
+  id: issue-description
   attributes:
-    label: 问题反馈
-    description: 对漏洞的内容简明描述
+    label: 问题描述
+    description: 请清晰、简洁地描述您遇到的问题。
   validations:
     required: true
 - type: textarea
@@ -38,4 +38,3 @@ body:
   attributes:
     label: 附加信息
     description: 如果你的问题需要进一步解释，或者想要表达其他内容，请在此处添加更多信息。（直接把图片、视频拖到编辑框即可添加图片或视频）
-
